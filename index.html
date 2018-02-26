@@ -1,226 +1,396 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>认识你的日子</title>	    
-        <link type="text/css" rel="stylesheet" href="./renxi/default.css">
-		<script type="text/javascript" src="./renxi/jquery.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-parser.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-jit.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-builderbase.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-async.min.js"></script>
-		<script type="text/javascript" src="./renxi/jscex-async-powerpack.min.js"></script>
-		<script type="text/javascript" src="./renxi/functions.js" charset="utf-8"></script>
-		<script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
-		<style>
-			span{
-				font-family:Verdana,"仿宋",Arial;
-			}
-			#fonts{
-				font-family:Verdana,"仿宋",Arial;	
-			}
-			.digit{
-				font-family:Verdana,"仿宋",Arial;	
-			}
-			#clock{
-				font-family:Verdana,"仿宋",Arial;	
-			}
-		</style>
-    </head>
-    <body>
-		<audio autoplay="autopaly" loop="loop">
-			<source src="renxi.mp3" type="audio/mp3" />
-		</audio>  
-        <div id="main">
-             <div id="wrap">
-                <div id="text">
-			        <div id="code"> 
-                        <font color="#FF0000"> 
-                            <span class="say">我喜欢一个女孩</span><br>
-                            <span class="says">但是她不知道我喜欢她</span><br>
-                            <span class="say">不知何时开始喜欢上了她</span><br>
-                            <span class="says">在她身上</span><br>
-                            <span class="say">我发现了一种她很独特的气质</span><br>
-                            <span class="says">深深的吸引着我</span><br>
-                            <span class="say">我很想跟她说</span><br>
-                            <span class="says">我喜欢你</span><br>
-                            <span class="say">但是种种原因却让我不敢开口</span><br>
-                            <span class="says">有时候跟她在一起的那些短暂时光</span><br>
-                            <span class="say">是那么的美好</span><br>
-                            <span class="says">是那么的幸福</span><br>
-                            <span class="say">如果有一天</span><br>
-                            <span class="says">我觉悟了</span><br>
-                            <span class="say">我想她也就不再属于我了</span><br>
-                            <span class="says"></span><br>
-                            <span class="says"></span><br>
-                            <span class="say"><span class="space"></span> -- 小白 --</span>
-                        </font></p>
-                    </div>
+<!DOCTYPE html>
+<html class="no-js" lang="en"><head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sujuer - 成长历程</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--main style-->
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+<!--background slider style-->
+<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+
+<!-- font css style-->
+<link rel="stylesheet" href="css/font-awesome.css">
+<!--for slider style-->
+
+<noscript>
+<link rel="stylesheet" type="text/css" href="css/fallback.css" />
+</noscript>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/fallback.css" />
+<![endif]-->
+</head><body>
+
+<!--wrapper start-->
+<div class="wrapper" id="wrapper">
+  <header>
+    <!--banner start-->
+    <div class="banner row" id="banner">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd" style="height:100%">
+        <!--background slide show start-->
+        <ul class="cb-slideshow" style="background:gray;">
+          <li style="opacity:0.7;"><span>Image 01</span></li>
+          <li><span>Image 02</span></li>
+          <li><span>Image 03</span></li>
+
+        </ul>
+        <!--background slide show end-->
+      </div>
+    </div>
+    <!--banner end-->
+    <div class="bannerText container">
+      <h1>I'm Sujuei Leung</h1>
+      <h2><b>PHP高级工程师</b></h2>
+    </div>
+    <!--menu start-->
+    <div class="menu">
+      <div class="navbar-wrapper">
+        <div class="container">
+          <div class="navwrapper">
+            <div class="navbar navbar-inverse navbar-static-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                  <a class="navbar-brand" href="#">Menu</a> </div>
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="menuItem active"><a href="#wrapper">主页</a></li>
+                    <li class="menuItem"><a href="#aboutme">个人简介</a></li>
+                    <li class="menuItem"><a href="#education">项目经历</a></li>
+                    <li class="menuItem"><a href="#technical">相关技能</a></li>
+                    <li class="menuItem"><a href="#protfolio">作品展示</a></li>
+                    <li class="menuItem"><a href="#contact">和我联系</a></li>
+                  </ul>
                 </div>
-                <div id="clock-box">
-                    <span class="sans-serif"></span><font id="fonts" color="#666">亲爱的佩佩，这是我们认识到现在的时光。</font>
-                    <div id="clock"></div>
-                </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
-            </div>  
+              </div>
+            </div>
+          </div>
+          <!-- End Navbar -->
         </div>
-        <script>
-            (function(){
-                var canvas = $('#canvas');
-        		
-                if (!canvas[0].getContext) {
-                    $("#error").show();
-                    return false;        }
+      </div>
+    </div>
+    <!--menu end-->
+  </header>
+  <!--about me start-->
+  <section class="aboutme" id="aboutme">
+    <div class="container">
+      <div class="heading">
+        <h2>
+          个人简介<br />
+          <span style="font-size:80%;">About me</span>
+        </h2>
+        
+      </div>
+      <div class="row">
+        <div class=" col-xs-12 col-sm-12 col-md-7 col-lg-7">
+          <h3>Sujuei Leung / 梁述锥</h3>
+          <h4 class="subHeading" style="color:#eee;">PHP高级工程师</h4>
+          <p><font style="font-size:110%;">善于学习新的知识，喜欢挑战高难度的事情，非常喜欢编程！有良好的编码规范，撰写文档的能力强，精通PHP，使用过ThinkPHP框架和Smarty框架进行过开发，可以独立搭建lamp环境和撰写框架，掌握Linux的基本实际操作，有过中小型项目开发的经验和个人独立开发项目的经验</font></p>
+          <p><font style="font-size:110%;">有了C++语言的基础，往后开始大面积狂虐其他语言：
+			<br />&nbsp;&nbsp;1、领教过Java语言的多线程编程和强大的错误处理能力;
+			<br />&nbsp;&nbsp;2、学习过C语言作为一种底层语言的无所不能;
+			<br />&nbsp;&nbsp;3、体验过PHP开发网站所带来的高效和便捷;
+			<br />&nbsp;&nbsp;4、研究过Python语言在各个领域丰富和实用的函数库;
+			<br />&nbsp;&nbsp;5、惊叹于LINUX的强大的功能;
+			<br />&nbsp;&nbsp;6、体验过ThinkPHP等框架开发快速和便捷。
+		  </font></p>
+		  <p>
+		  <font style="font-size:110%;">
+		  生命不息，奋斗不止。目前正在研究的领域是云服务和大数据挖掘这些热门技术。追赶当今时代最新技术的潮流，做一个技术达人是我的目标！
+		  </font>
+		  </p>
+          </div>
+        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic"> <img src="./images/me.jpg" alt="" class="img-circle topmar"> </div>
+      </div>
+    </div>
+  </section>
+  <!--about me end-->
 
-                var width = canvas.width();
-                var height = canvas.height();        
-                canvas.attr("width", width);
-                canvas.attr("height", height);
-                var opts = {
-                    seed: {
-                        x: width / 2 - 20,
-                        color: "rgb(190, 26, 37)",
-                        scale: 2
-                    },
-                    branch: [
-                        [535, 680, 570, 250, 500, 200, 30, 100, [
-                            [540, 500, 455, 417, 340, 400, 13, 100, [
-                                [450, 435, 434, 430, 394, 395, 2, 40]
-                            ]],
-                            [550, 445, 600, 356, 680, 345, 12, 100, [
-                                [578, 400, 648, 409, 661, 426, 3, 80]
-                            ]],
-                            [539, 281, 537, 248, 534, 217, 3, 40],
-                            [546, 397, 413, 247, 328, 244, 9, 80, [
-                                [427, 286, 383, 253, 371, 205, 2, 40],
-                                [498, 345, 435, 315, 395, 330, 4, 60]
-                            ]],
-                            [546, 357, 608, 252, 678, 221, 6, 100, [
-                                [590, 293, 646, 277, 648, 271, 2, 80]
-                            ]]
-                        ]] 
-                    ],
-                    bloom: {
-                        num: 700,
-                        width: 1080,
-                        height: 650,
-                    },
-                    footer: {
-                        width: 1200,
-                        height: 5,
-                        speed: 10,
-                    }
-                }
+  <section class="education" id="education"  style="background:#ddd;">
+    <div class="container">
+      <div class="heading">
+        <h2>Project Experience<br /><span style="font-size:80%; color:gray; padding-left:13px;">项目经历</span></h2>
+      </div>
+      
+      <div class="row workDetails">
+        <!-- <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+          <div class="workYear">P2P金融网站</div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+          <div class="arrowpart"></div>
+          <div class="exCon">
+            <h4>金汇丰金融网站</h4>
+            <h5 >个人P2P网贷平台</h5>
+			<p>“金汇丰”（www.lip2p.com）是佛山新起的一家p2p个人网贷公司的官方网站，主要的功能包括“个人理财”、“个人贷款”、“预约抢标”、“现金充值和提现”以及“数据统计”等等。由于网站后期要承担着大量的资金流动以及高并发的用户访问量，因此该网站对安全级别的要求以及用户承载量的要求都极高。</p>
+            <p>本人负责该网站后台“个人贷款”功能、“数据统计”功能以及“现金充值和提现”接口的实现兼维护升级。整个设计过程使用到了许多的PHP设计模式（工厂模式、观察者模式、委托模式等等）。后期还使用了很多的明文加密函数和测试调试函数/工具等等。可以说整个项目下来，让我网站后台的研发能力提到了一个新的高度！</p>
+          </div>
+        </div> -->
+      </div>
+      <div class="row workDetails">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+          <div class="workYear">蘑菇街商城</div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+          <div class="arrowpart"></div>
+          <div class="exCon">
+            <h4>蘑菇街商城</h4>
+            <h5>时尚电商网站</h5>
+            <p>蘑菇街商城是主要以女性时尚电子商务平台，致力于年轻时尚爱美的女性用户提供最流行的时尚购物体验;系统是基于PHP语言及MYSQL数据库构架开发的跨平台开源程序。</p>
+			<!-- <p>本人负责该Web网站的前端和后端开发的整体布局工作，包括前端的界面设计，图片制作，Html,CSS,Js等代码的实现和优化，以及后端的Mysql数据库的设计，并且采用PHP作为脚本语言实现整个网站的业务逻辑（基于MVC的设计模式），并且负责维护Linux服务器，搭建网站的lamp平台环境等等。</p> -->
+			<!-- <p>商城类网站，面向过程的编写。使用SESSION技术完成购物车功能，商品的无限分类，购买商品，放入购物车，支付，产生订单，卖家发货，等控制流程。以及后台的管理商品的增删改查操作。</p> -->
+			<!-- <p>该项目是采用MVC设计模式运用ThinkPHP框架实现的，主要功能基本完成，采用ThinkPHP内置模板，用到的技术点有：jQuery、JavaScript、
+Ajax、HTML及CSS。</p> -->
+			<p>本人负责该Web网站前台的登录注册模块、购物车以及后台的管理员管理，限权管理，网站配置等相关模块。<br />
+			该项目是采用MVC设计模式运用ThinkPHP框架实现的，主要功能基本完成，采用ThinkPHP内置模板，用到的技术点有：jQuery、JavaScript、
+Ajax、HTML及CSS。</p>
+          </div>
+        </div>
 
-                var tree = new Tree(canvas[0], width, height, opts);
-                var seed = tree.seed;
-                var foot = tree.footer;
-                var hold = 1;
+      </div>
+	  <div class="row workDetails">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+          <div class="workYear">小米商城</div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
+          <div class="arrowpart"></div>
+          <div class="exCon">
+            <h4>小米商城</h4>
+            <h5>手机电商网站</h5>
+			<p>ECShop是上海商派网络科技有限公司（ShopEx）旗下——B2C独立网店系统，适合企业及个人快速构建个性化网上商店，系统是基于PHP语言及MYSQL数据库构架开发的跨平台开源程序。</p>
+            <p>
+			本人主要是通过利用ECShop框架开发出一套小米的电商平台网站。通过成熟的ECShop商业框架，修改相应的前端界面以及开发自己所特有的业务流程，即可搭建一个功能强大的电商平台，可以轻松实现购物车、订单管理、模拟支付等等的功能。
+			</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                canvas.click(function(e) {
-                    var offset = canvas.offset(), x, y;
-                    x = e.pageX - offset.left;
-                    y = e.pageY - offset.top;
-                    if (seed.hover(x, y)) {
-                        hold = 0; 
-                        canvas.unbind("click");
-                        canvas.unbind("mousemove");
-                        canvas.removeClass('hand');
-                    }
-                }).mousemove(function(e){
-                    var offset = canvas.offset(), x, y;
-                    x = e.pageX - offset.left;
-                    y = e.pageY - offset.top;
-                    canvas.toggleClass('hand', seed.hover(x, y));
-                });
+  <!--technical start-->
+  <section class="technical" id="technical">
+    <div class="container">
+      <div class="heading">
+        <h2>Technical Skills<br /><span style="font-size:80%; color:gray;">相关技能</span></h2>
+      </div>
+      <div class="row">
+        <!-- <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
+            <h4>PHP</h4>
+            <p>熟练掌握C/C++的基础知识，能快速开发各种图形化应用</p>
+            <P>PHP开发网站所带来的高效和便捷;</P>
+          </div>
+        </div> -->
+		
+		<div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="90"> <span class="percent"></span> </span>
+            <h4>PHP</h4>
+            <p>PHP开发网站所带来的高效和便捷</p>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="90"> <span class="percent"></span> </span>
+            <h4>MySQL</h4>
+            <!-- <p>深入研究过JavaSE、JavaEE和JavaME三个分支</p> -->
+            <p>PHP与MySQL是黄金组合，能快速搭建一个项目平台</p>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
+            <h4>Linux</h4>
+            <p>对CentOS、Ubuntu、RedHat等系统能操作自如</p>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="85"> <span class="percent"></span> </span>
+            <h4>HTML5 / CSS3</h4>
+            <p>尝试运用过最新的API以及各种标签属性</p>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
+            <h4>jQuery</h4>
+            <p>一个极其强大的JavaScript库，让人欲罢不能</p>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="95"> <span class="percent"></span> </span>
+            <h4>ThinkPHP / Smarty</h4>
+            <p>ThinkPHP / Smarty等框架开发快速和便捷</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--technical end-->
 
-                var seedAnimate = eval(Jscex.compile("async", function () {
-                    seed.draw();
-                    while (hold) {
-                        $await(Jscex.Async.sleep(10));
-                    }
-                    while (seed.canScale()) {
-                        seed.scale(0.95);
-                        $await(Jscex.Async.sleep(10));
-                    }
-                    while (seed.canMove()) {
-                        seed.move(0, 2);
-                        foot.draw();
-                        $await(Jscex.Async.sleep(10));
-                    }
-                }));
+  <!--protfolio start-->
+  <section class="protfolio" id="protfolio">
+    <div class="container">
+      <div class="heading">
+        <h2> 作品展示<br />
+          <span style="font-size:70%;">Portfolio</span>
+		</h2>
+        <p></p>
+      </div>
+      <div class="portfolioFilter">
+        <ul>
+          <li><a href="#" data-filter="*" class="current">全部</a></li>
+          <!-- <li><a href="#" data-filter=".photos">Java</a></li> -->
+          <li><a href="#" data-filter=".branding">PHP</a></li>
+          <!-- <li><a href="#" data-filter=".illustration">Python</a></li> -->
+        </ul>
+      </div>
+      <ul class="portfolioContainer row">
+        <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/1.jpg" title="小米页面" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/1.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li>
+        <li class="branding illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/2.jpg" title="蘑菇街购物车页面" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/2.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li>
+        <!-- <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/3.jpg" title="" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/3.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li> -->
+        <li class="branding illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/4.jpg" title="蘑菇街商城" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/4.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li>
+        <!-- <li class="illustration photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/5.jpg" title="" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/5.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li> -->
+       <!--  <li class="branding photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/6.jpg" title="" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/6.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li> -->
+        <!-- <li class="illustration photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/7.jpg" title="" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/7.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li> -->
+        <li class="branding col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/portfolio/big/8.jpg" title="高仿小米商城网站" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="./images/project/8.jpg" alt="" style="height:279px;overflow:hidden;"> </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--protfolio end-->
 
-                var growAnimate = eval(Jscex.compile("async", function () {
-                    do {
-            	        tree.grow();
-                        $await(Jscex.Async.sleep(10));
-                    } while (tree.canGrow());
-                }));
+  <!--contact start-->
+  <section class="contact" id="contact">
+    <div class="container topCon">
+      <div class="heading">
+        <h2>Get In Touch<br /><span style="font-size:70%; color:gray;">和 我 联 系</span></h2>
+      </div>
+    </div>
 
-                var flowAnimate = eval(Jscex.compile("async", function () {
-                    do {
-            	        tree.flower(2);
-                        $await(Jscex.Async.sleep(10));
-                    } while (tree.canFlower());
-                }));
+  </section>
+  <section class="contactDetails">
+    <div class="container">
+      <!--contact info start-->
+      <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
+        <h4>联系方式：</h4>
+		<p> <i class="fa fa-envelope-o"></i><span style="font-size:120%;">邮 箱：liangshuzhui@foxmail.com</span></p>
+		<p> <i class="fa fa-mobile fa-lg"></i><span style="font-size:120%;"> 微 信：liangshuzhui</span></p>
+		<p> <i class="fa fa-link "></i><span style="font-size:120%;">FaceBook：Sujuei Leung</span></p>
+		<p> <i class="fa fa-map-marker fa-lg"></i><span style="font-size:120%;">Twitter：Sujuei Leung</span></p>
+        
+        
+        
+      </div>
+      <!--contact info end-->
+      <!--contact form start-->
+      <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
+        <h4>发送短消息</h4>
+        <div id="message"></div>
+        <form method="post" action="php/contact.php" name="cform" id="cform">
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Your Name..." >
+          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" placeholder="Your Email..." >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your Message..."></textarea>
+          <input type="submit" id="submit" name="send" class="submitBnt" value="提交消息">
+          <div id="simple-msg"></div>
+        </form>
+      </div>
+      <!--contact form end-->
+    </div>
+  </section>
+  <!--contact end-->
 
-                var moveAnimate = eval(Jscex.compile("async", function () {
-                    tree.snapshot("p1", 240, 0, 610, 680);
-                    while (tree.move("p1", 500, 0)) {
-                        foot.draw();
-                        $await(Jscex.Async.sleep(10));
-                    }
-                    foot.draw();
-                    tree.snapshot("p2", 500, 0, 610, 680);
+  <!--footer start-->
+  <section class="footer" id="footer">
+    <div class="container">
+      <ul>
+        <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-pinterest fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss fa-2x"></i></a></li>
+      </ul>
+    </div>
+  </section>
+  <!--footer end-->
+</div>
+<!--wrapper end-->
+<!--modernizr js-->
+<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+<!--jquary min js-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+<!--for custom jquary-->
+<script src="js/custom.js"></script>
+<!--for placeholder jquary-->
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<!--for menu jquary-->
+<script type="text/javascript" src="js/stickUp.js"></script>
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready( function() {
+  //enabling stickUp on the '.navbar-wrapper' class
+  $('.navbar-wrapper').stickUp({
+				parts: {
+				  0: 'banner',
+				  1: 'aboutme',
+				  2: 'education',
+				  3: 'technical',
+				  4: 'protfolio',
+				  5: 'contact'
+				},
+				itemClass: 'menuItem',
+				itemHover: 'active',
+				topMargin: 'auto'
+			  });
 
-                    // 会有闪烁不得意这样做, (＞﹏＜)
-                    canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-                    canvas.css("background", "#ffe");
-                    $await(Jscex.Async.sleep(300));
-                    canvas.css("background", "none");
-                }));
+});
 
-                var jumpAnimate = eval(Jscex.compile("async", function () {
-                    var ctx = tree.ctx;
-                    while (true) {
-                        tree.ctx.clearRect(0, 0, width, height);
-                        tree.jump();
-                        foot.draw();
-                        $await(Jscex.Async.sleep(25));
-                    }
-                }));
+$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+  $( ".navbar-collapse" ).addClass( "hideClass" );
+});
 
-                var textAnimate = eval(Jscex.compile("async", function () {
-        		    var together = new Date();
-        		    together.setFullYear(2016,7 , 6); 			//时间年月日
-        		    together.setHours(13);						//小时	
-        		    together.setMinutes(53);					//分钟
-        		    together.setSeconds(0);					//秒前一位
-        		    together.setMilliseconds(2);				//秒第二位
 
-        		    $("#code").show().typewriter();
-                    $("#clock-box").fadeIn(500);
-                    while (true) {
-                        timeElapse(together);
-                        $await(Jscex.Async.sleep(1000));
-                    }
-                }));
+$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+  $( ".navbar-collapse" ).addClass( "collapse" );
+});
 
-                var runAsync = eval(Jscex.compile("async", function () {
-                    $await(seedAnimate());
-                    $await(growAnimate());
-                    $await(flowAnimate());
-                    $await(moveAnimate());
 
-                    textAnimate().start();
+$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
+  $( ".navbar-collapse" ).removeClass( "in" );
+});
 
-                    $await(jumpAnimate());
-                }));
+$( ".navbar-toggle" ).click(function() {
+  $( ".navbar-collapse" ).removeClass( "hideClass" );
+});
 
-                runAsync().start();
-            })();
-        </script>
 
-    </body>
+});
+</script>
+<!--for portfoli filter jquary-->
+<script src="js/jquery.isotope.js" type="text/javascript"></script>
+<!--for portfoli lightbox -->
+<link type="text/css" rel="stylesheet" id="theme" href="css/jquery-ui-1.8.16.custom.css">
+<link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
+<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.rlightbox.js"></script>
+<!--for skill chat jquary-->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.easypiechart.js"></script>
+<!--contact form js-->
+<script type="text/javascript" src="js/jquery.contact.js"></script>
+</body>
 </html>
